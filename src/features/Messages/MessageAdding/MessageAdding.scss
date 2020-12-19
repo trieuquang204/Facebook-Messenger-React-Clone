@@ -1,0 +1,143 @@
+.MessageAdding{
+    position: fixed;
+    bottom: 0;
+    width: 75%;
+    background-color: white;
+
+    form{
+        background-color: white;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+    
+        input{
+            border: none;
+            outline: none;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 20px;
+            flex-grow: 2;
+            font-size: 16px;
+        }
+
+        label, div{
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 50%;
+
+            &:hover{
+                background-color: #F5F5F5;
+            }
+        }
+
+        .fileInput{
+            display: none;
+        }
+
+        svg{
+            color: #0099FF;
+        }
+    }
+}
+
+.messagingDisabled{
+    padding: 0 !important; 
+    button, div{
+       svg{
+        color: #A4AAB3;
+        } 
+    }
+}
+
+.chosenFiles{
+    display: flex;
+    align-items: center;
+
+    .chosenPhotoFile{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        button{
+                transition: all .2s ease-in-out ;
+                opacity: 0;
+            }
+
+        svg{
+            color: white;
+            font-size: 20px;
+        }
+
+        &:hover{
+            button{
+                opacity: 1;
+            }
+        }
+    }
+
+    .chosenFile{
+        button{
+            opacity: 0;
+            transition: all 200ms ease-in-out;
+            margin-left: 5px;
+            svg{
+                color: black;
+            }
+        }
+        &:hover{
+            button{
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+.chosenPhotoFile, .chosenFile{
+    margin: 10px; 
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chosenPhotoFile{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.chosenFile{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    max-width: 300px;
+
+    .fileIcon{
+        background-color: #0099FF;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 15px;
+
+        svg{
+            color: white;
+        }
+    }
+
+    .chosenFileDescription{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-left: 20px;
+
+        p{
+            font-weight: 600;
+        }
+    }
+
+}

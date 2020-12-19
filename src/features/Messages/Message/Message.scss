@@ -1,0 +1,101 @@
+.Message{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .MuiAvatar-root{
+        width: 37px;
+        height: 37px;
+        z-index: -2;
+        margin-right: 10px;
+    }
+
+    button{
+        opacity: 0;
+        margin: 0 10px;
+    }
+
+    &:hover{
+        button{
+            opacity: 1;
+        }
+    }
+}
+
+.MessageUserName{
+    color: gray;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    margin: 2px 5px;
+}
+
+.CUIA{
+    flex-direction: row-reverse;
+    .MessageUserName{
+        display: none;
+    }
+}
+
+.current_user_is_author, .other_user_is_author{
+    width: 55%;
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.current_user_is_author{
+    flex-direction: row-reverse;
+
+    .Message_text{
+        background-color: #0099FF;
+        color: white;
+    }
+}
+
+.other_user_is_author{
+    flex-direction: row;
+    
+    .Message_text{
+    background-color: #F1F0F0;
+    color: black;
+        a{
+            color: black;
+        }
+    }
+
+    .MessageFlex{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+.Message_text, .Message_Image{
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+
+    .fileMessage{
+        display: flex;
+        flex-direction: column;
+        color: white;   
+        text-align: center;
+        span{
+            word-break: break-all;
+        }
+        p{
+            margin-top: 5px;
+        }
+    }
+    span{
+        word-break: break-all;
+    }
+    
+}
+
+.Message_Image{
+    padding: 0;
+    border: 1px solid lightgray;
+    user-select: none;
+}

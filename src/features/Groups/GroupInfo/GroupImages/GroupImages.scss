@@ -1,0 +1,27 @@
+.GroupImages{
+    text-align: center;
+
+    p{
+        color: gray;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    span{
+        color: gray;
+        font-weight: 400;
+    }
+
+    .Images{
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-gap: 5px;
+    }
+
+    .GroupImages_Item{
+        height: 100px;
+        background-size: cover;
+        background-position: 50%;
+    }
+
+}
